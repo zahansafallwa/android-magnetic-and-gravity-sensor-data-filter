@@ -9,7 +9,7 @@ public class minPassFilter {
 
     public static float[] filter(float min, float max, float[] present, float[] former) {
         if (present==null || former==null) 
-            throw new NullPointerException("Input and former arrays can't be non-NULL");
+            throw new NullPointerException("Input and former arrays can't be NULL");
         if (present.length!=former.length) 
             throw new IllegalArgumentException("Input and former arrays must have the same length");
 
