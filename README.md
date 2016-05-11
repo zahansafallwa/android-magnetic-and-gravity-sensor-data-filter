@@ -3,7 +3,7 @@ This class filters the android magnetic and gravity sensor data for usable error
 
 For any sensor value changed you just need to call the minPassFilter class like below
 
-public void onSensorChanged(SensorEvent evt) {
+     public void onSensorChanged(SensorEvent evt) {
     	if (!computing.compareAndSet(false, true)) return;
 
         if (evt.sensor.getType() == Sensor.TYPE_ACCELEROMETER) {
@@ -17,4 +17,4 @@ public void onSensorChanged(SensorEvent evt) {
             mag[1] = smooth[1];
             mag[2] = smooth[2];
         }
-}
+    }
